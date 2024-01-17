@@ -25,7 +25,7 @@ body{
 }
 
 .steps{
-    width: 450px;
+    width: 386px;
 }
 
 .frame{
@@ -40,32 +40,93 @@ body{
 }
 
 
-.diya{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    position: absolute;
-    margin: 0rem;
-    width: 3.5rem;
-    height: 3.5rem;
-    z-index: 2;
-    margin-top: -3rem;
-}
+
 
 .userdiya{
-    width: 3.6rem;
-    padding: 0 .2rem 0 .5rem;
+    width: 4.2rem;
+    padding: .1rem;
 }
 
 .diya {
     display: grid;
     align-items: center;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 2fr);
     column-gap: .5rem;
-    row-gap: -5rem; /* Adjust the gap between items */
+    row-gap: .1rem;
 }
 
 .userdiya {
     text-align: center;
+}
+
+/* .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+} */
+
+.username p{
+    font-size: .45rem;
+    color: #612000;
+    text-align: center;
+    margin-top: -1.2rem;
+    padding: 0 5px 0 5px;
+    overflow: hidden;
+    width: 60px;
+    height: 15px;
+    font-weight: 600;
+}
+
+.user_diya{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mobile-message {
+    display: none;
+}
+
+@media only screen and (min-width: 390px) {
+    .userdiya{
+        width: 5.2rem;
+    }
+
+    .username p{
+        margin-top: -1.35rem;
+        width: 70px;
+        font-size: .5rem;
+    }
+}
+
+@media only screen and (min-width: 450px) {
+    .background-image-container {
+        display: none;
+    }
+
+    footer{
+        color: #000;
+    }
+
+    .mobile-message {
+        display: flex;
+        font-size: 2rem;
+        margin-top: 10rem;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .mobile-message img{
+        width: 70px;
+        margin-top: 1rem;
+    }
+
+    body{
+        background-color: #fff;
+    
+    }
 }
 
