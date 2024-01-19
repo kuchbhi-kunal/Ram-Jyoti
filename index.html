@@ -33,8 +33,8 @@
             </p>
 
             <br><br>
-            <form action="">
-                <input type="text" id="name" name="name" placeholder="Your Name"><br>
+            <form action="" id="diyaForm">
+                <input type="text" id="name" name="name" placeholder="Your Name" required><br>
                 <input type="submit" value="Light A Diya">
               </form>
         </div>
@@ -53,5 +53,23 @@
         <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Orange%20Heart.png" alt="Orange Heart" class="orangeheart" />
         <h2>by</h2>
     </footer>
+
+        <!-- Inside the first page, after the form -->
+    <script>
+        document.getElementById("diyaForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+
+            // Get the entered name
+            var name = document.getElementById("name").value;
+
+            // Store the name in local storage
+            localStorage.setItem("diyaUserName", name);
+
+            // Redirect to the second page
+            window.location.href = "stair.html";
+        });
+    </script>
+    <script src="script.js"></script>
+
 </body>
 </html>
