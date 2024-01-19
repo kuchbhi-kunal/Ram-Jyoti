@@ -33,7 +33,7 @@
             </p>
 
             <br><br>
-            <form action="" id="diyaForm">
+            <form action="/api/user" id="diyaForm" method="POST">
                 <input type="text" id="name" name="name" placeholder="Your Name" required><br>
                 <input type="submit" value="Light A Diya">
               </form>
@@ -55,7 +55,7 @@
     </footer>
 
         <!-- Inside the first page, after the form -->
-    <script>
+    <!-- <script>
         document.getElementById("diyaForm").addEventListener("submit", function (event) {
             event.preventDefault(); // Prevent the default form submission behavior
 
@@ -68,7 +68,39 @@
             // Redirect to the second page
             window.location.href = "stair.html";
         });
+    </script> -->
+
+
+<!-- Backend script -->
+
+    <script>
+        document.getElementById('diyaForm').addEventListener('submit', async function (event) {
+        event.preventDefault();
+
+        const name = document.getElementById('name').value;
+
+        try {
+            const response = await fetch('http://localhost:3000/api/user', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ userName: name }),
+            });
+
+            const data = await response.json();
+            console.log(data); 
+            
+                window.location.href = "stair.html";
+          
+
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    });
+
     </script>
+
     <script src="script.js"></script>
 
 </body>
