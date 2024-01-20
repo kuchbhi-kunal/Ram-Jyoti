@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>जय सिया राम</title>
+</head>
+<body>
+    
+    <div class="background-image-container">
+        <div class="content">
+            
+            <!-- <h1>
+                जय सिया राम
+            </h1> -->
+          <div class="logo">
+            <div class="rotating-image">
+                <img src="assets/flower.png" alt="Rotating Image">
+            </div>
+            <div class="diya">
+                <img src="assets/diya.png" alt="ram" class="ram">
+            </div>
+          </div>
+            <p>
+                Let's pledge to have the Ram Jyoti lit in every house.
+            </p>
+
+            <br><br>
+            <form action="" id="diyaForm">
+                <input type="text" id="name" name="name" placeholder="Your Name" required><br>
+                <input type="submit" value="Light A Diya">
+              </form>
+        </div>
+    </div>
+    <div class="mobile-message">
+        <p>जय श्री राम 🙏</p>
+        <p>Please switch to a mobile device</p>
+        <div>
+            <img src="assets/mobile.png" alt="">
+        </div>
+    </div>
+
+
+    <footer>
+        <h2>Made with</h2>
+        <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Orange%20Heart.png" alt="Orange Heart" class="orangeheart" />
+        <h2>by <a href="www.kuchbhikunal.com"></a></h2>
+    </footer>
+
+        <!-- Inside the first page, after the form -->
+    <script>
+        document.getElementById("diyaForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+
+            // Get the entered name
+            var name = document.getElementById("name").value;
+
+            // Store the name in local storage
+            localStorage.setItem("diyaUserName", name);
+
+            // Redirect to the second page
+            window.location.href = "stair.html";
+        });
+    </script>
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stair.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Ram Jyoti Wall</title>
+</head>
+<body>
+
+
+<div class="background-image-container">
+    <div class="frame">
+        <img src="assets/topframe.png" alt="">
+    </div>
+       <!-- Floating button for scrolling to the top -->
+       <!-- <button class="floating-button" id="scrollToTopButton" onclick="scrollToTop()">Scroll Top</button> -->
+
+       <!-- Floating button for scrolling to the user's unique Diya -->
+       <button class="floating-button" id="scrollToUserDiyaButton" onclick="scrollToUserDiya()">My Diya</button>
+    <div class="title">
+        <img src="assets/stairsbg.png" alt="">
+    </div>
+    <div class="content">
+
+        
+
+        <div class="container">
+            
+            <!-- <div class="diya">
+                <div class="user_diya">
+                    <div>
+                        <img class="userdiya" src="assets/diya (2).png" alt="stair">  
+                    </div>
+                    <div class="username">
+                        <p>Kunal Thakkar</p>
+                    </div>
+                </div>  
+            </div> -->
+
+        </div>
+
+        <!-- Popup card container -->
+        <div id="diyaPopup" class="diya-popup">
+            <div id="popupContent" class="popup-content">
+                <span id="closePopupButton" class="close" onclick="closeDiyaPopup">&times;</span>
+                 <!-- Element for the QR code -->
+                <div id="diyaQRCode" class="qrcode-container"></div>
+                <p id="diyaTimestamp">Date and Time</p>
+            </div>
+        </div>
+
+        <!-- <div class="stairs">
+            <img class="steps" src="assets/steps (1).png" alt="stair">
+            <img class="steps" src="assets/steps (1).png" alt="stair">
+            <img class="steps" src="assets/steps (1).png" alt="stair">
+            <img class="steps" src="assets/steps (1).png" alt="stair">
+        </div> -->
+        
+    </div>
+</div>
+    
+        <div class="mobile-message">
+            <p>जय श्री राम 🙏</p>
+            <p>Please switch to a mobile device</p>
+            <div>
+                <img src="assets/mobile.png" alt="">
+            </div>
+        </div>
+
+
+<!-- Include the QR code generation library -->
+<script src="https://davidshimjs.github.io/qrcodejs/qrcode.min.js"></script>
+
+<!-- Inside the second page, after the existing content -->
+<script>
+    // Get the stored name from local storage
+    var userName = localStorage.getItem("diyaUserName");
+
+    if (userName) {
+        // Append a new div with the stored name
+        var container = document.querySelector(".container");
+
+        var newDiv = document.createElement("div");
+        newDiv.classList.add("diya");
+
+        newDiv.innerHTML = `
+            <div class="user_diya focused-glow" id="userDiyaId">
+                <div>
+                    <img class="userdiya" src="assets/userdiya2.png" alt="stair">
+                </div>
+                <div class="username">
+                    <p>${userName}</p>
+                </div>
+            </div>
+
+        `;
+
+        container.appendChild(newDiv);
+    }
+</script>
+<script src="script.js"></script>
+
+</body>
+</html>
