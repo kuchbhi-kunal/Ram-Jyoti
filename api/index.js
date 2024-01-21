@@ -29,7 +29,7 @@ app.use(cors());
 
 app.use(bodyParser.json());
 
-app.use(express.static('jaisiyaram'));
+app.use(express.static('public'));
 
 app.use('/api/user', userRouter);
 
