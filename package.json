@@ -7,13 +7,13 @@
   "scripts": {
     "dev": "nodemon api/index.js",
     "start": "node api/index.js",
-    "build": "npm install && npm install --prefix jaisiyaram && npm run build --prefix jaisiyaram"
+    "build": "npm install --prefix api"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kuchbhi-kunal/jaisiyaram.git"
   },
-  "author": "",
+  "author": "Kunal Thakkar, Parth Sankpal, Aditya Khedekar",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/kuchbhi-kunal/jaisiyaram/issues"
