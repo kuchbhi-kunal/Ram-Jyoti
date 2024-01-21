@@ -5,7 +5,6 @@ import mongoose from "mongoose";
 
 import dotenv from "dotenv";
 
-import cors from "cors"; 
 // import bodyParser from "body-parser";
 
 import userRouter from "./routes/user.route.js"
@@ -25,7 +24,6 @@ mongoose
 
 const app = express();
 
-app.use(cors());
 
 app.use(express.json());
 app.use(express.static('public'));
