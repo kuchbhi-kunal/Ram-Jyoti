@@ -1,0 +1,178 @@
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.background-image-container {
+    /* background-color: #CE4A00; */
+    background-color: rgb(0, 0, 72);
+    background-image: url('assets/bg\ \(3\).png');
+    opacity: .95; /* Replace 'your-image.jpg' with the path to your background image */
+    background-size: cover; /* or 'contain' depending on your preference */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: 12.5%;
+    height: 100vh; /* Adjust the height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-attachment: fixed; /* This keeps the background fixed while the content scrolls */
+    overflow: auto; /* Enable scrolling for content that exceeds the viewport */ /* Set text color to ensure readability */
+}
+
+/* .background-image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(10, 0, 77, 0.326);
+} */
+
+.content{
+    height: 100%;
+    width: 100vh;
+    margin-top: 15rem;
+    text-align: center;
+    color: #fff;
+}
+
+h1{
+    font-family: "Yatra One", system-ui;
+    font-weight: 400;
+    text-align: center;
+    line-height: 40px;
+    font-size: 1.5rem;
+}
+
+img{
+    width: 150px;
+    padding: 0;
+}
+
+p{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 2rem 4rem 0 4rem;
+}
+
+.diya{
+    position: relative;
+    z-index: 1;
+    margin-top: -7.5rem;
+}
+
+.rotating-image {
+    position: relative;
+    z-index: 0;
+}
+
+.rotating-image img {
+    animation: rotate 5s linear infinite; /* Adjust the duration and other properties as needed */
+    width: 160px;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+input[type="text"],
+input[type="submit"] {
+    padding: 10px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+}
+
+input[type="text"] {
+    width: 250px;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+input[type="submit"] {
+    background-color: #1787ff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: "Poppins", sans-serif;
+    width: 150px;
+    margin-top: .5rem;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+input[type="text"]::placeholder{
+    color: #9b9b9b;
+    font-size: .8rem;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    bottom: 2%;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+}
+
+.orangeheart{
+    width: 20px;
+    padding: 0 5px 5px 5px;
+}
+
+h2{
+    font-weight: 400;
+    font-size: .8rem;
+}
+
+.mobile-message {
+    display: none;
+}
+
+@media only screen and (min-width: 450px) {
+    .background-image-container {
+        display: none;
+    }
+
+    footer{
+        color: #000;
+    }
+
+    .mobile-message {
+        display: flex;
+        font-size: 2rem;
+        margin-top: 10rem;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .mobile-message img{
+        width: 70px;
+        margin-top: 1rem;
+    }
+}
