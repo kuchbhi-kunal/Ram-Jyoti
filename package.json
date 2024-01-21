@@ -1,0 +1,29 @@
+{
+  "name": "jaisiyaram",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon api/index.js",
+    "start": "node api/index.js",
+    "build": "npm install && npm install --prefix jaisiyaram && npm run build --prefix jaisiyaram"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kuchbhi-kunal/jaisiyaram.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kuchbhi-kunal/jaisiyaram/issues"
+  },
+  "homepage": "https://github.com/kuchbhi-kunal/jaisiyaram#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^8.1.0",
+    "nodemon": "^3.0.3"
+  }
+}
