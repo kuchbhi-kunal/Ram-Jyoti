@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 
 
 
-import dotenv from "dotenv";
+
 require('dotenv').config();
 
 import cors from "cors"; 
