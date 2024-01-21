@@ -3,19 +3,16 @@ import mongoose from "mongoose";
 
 
 
-
-require('dotenv').config();
+import dotenv from "dotenv";
 
 import cors from "cors"; 
-// import bodyParser from "body-parser";
+import bodyParser from "body-parser";
 
 import userRouter from "./routes/user.route.js"
 
 import path from 'path';
 
 const __dirname = path.resolve();
-
-const bodyParser = require('body-parser');
 
 mongoose
   .connect(process.env.MONGODB)
