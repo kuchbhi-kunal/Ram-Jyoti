@@ -11,7 +11,7 @@ import bodyParser from "body-parser";
 import userRouter from "./routes/user.route.js"
 
 import path from 'path';
-
+app.set('view engine', 'ejs');
 const __dirname = path.resolve();
 console.log("hello");
 mongoose
@@ -40,12 +40,14 @@ app.use('/api/user', userRouter);
 //   res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));
 // })
 
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/public/index.html');
+});
 
-
-app.use(express.static(path.join(__dirname, 'jaisiyaram')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'jaisiyaram', 'index.html'));
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 const PORT = process.env.PORT || 3000;
 
