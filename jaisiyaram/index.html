@@ -55,20 +55,33 @@
     </footer>
 
         <!-- Inside the first page, after the form -->
-    <script>
-        document.getElementById("diyaForm").addEventListener("submit", function (event) {
-            event.preventDefault(); // Prevent the default form submission behavior
-
-            // Get the entered name
-            var name = document.getElementById("name").value;
-
-            // Store the name in local storage
-            localStorage.setItem("diyaUserName", name);
-
-            // Redirect to the second page
-            window.location.href = "stair.html";
+        <script>
+            document.getElementById('diyaForm').addEventListener('submit', async function (event) {
+            event.preventDefault();
+    
+            const name = document.getElementById('name').value;
+    
+            try {
+                const response = await fetch('http://localhost:3000/api/user', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ userName: name }),
+                });
+    
+                const data = await response.json();
+                console.log(data); 
+                
+                    window.location.href = "stair.html";
+              
+    
+            } catch (error) {
+                console.error('Error:', error);
+            }
         });
-    </script>
+    
+        </script>
     <script src="script.js"></script>
 
 </body>
