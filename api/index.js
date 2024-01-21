@@ -1,6 +1,8 @@
 import express from "express";
 import mongoose from "mongoose";
 
+import http from "http";
+
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -40,6 +42,9 @@ app.use('/api/user', userRouter);
 //   res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));
 // })
 
+
+const server = http.createServer(app);
+
 app.use(express.static(path.join(__dirname, 'jaisiyaram')));
 
 app.get('*', (req, res) => {
@@ -47,6 +52,6 @@ app.get('*', (req, res) => {
 });
 const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+server.listen(PORT, () => {
+  console.log(`Server is running on port ${server.address().port}`);
 });
