@@ -1,0 +1,3 @@
+runtime : nodejs19
+env: standard
+instamce_cass : F1
